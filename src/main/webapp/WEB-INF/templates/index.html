@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Sample web app: maven spring java-config thymeleaf jpa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+    <div>
+        <h1 th:text="${greeting}">greeting</h1>
+    </div>
+
+    <div>
+        <h2>Companies</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Employees</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="company : ${companies}">
+                <td th:text="${company.id}">id 1</td>
+                <td th:text="${company.name}">name 1</td>
+                <td th:text="${company.employees}">employees 1</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
